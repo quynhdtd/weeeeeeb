@@ -5,12 +5,13 @@ import CustomerCard from "../../components/CustomerCard";
 import SimpleTextField from "../../components/SimpleTextField";
 import SelectField from "../../components/SelectField";
 import MessageTextField from "../../components/MessageTextField";
+import Footer from "../../components/Footer";
 
 import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
 import { createSvgIcon } from "@mui/material/utils";
-import {Checkbox} from "@mui/material";
-import {FormControlLabel} from "@mui/material";
+import { Checkbox } from "@mui/material";
+import { FormControlLabel } from "@mui/material";
 
 import avatar from "../../assets/avatar.svg";
 import avatar2 from "../../assets/avatar2.svg";
@@ -167,7 +168,7 @@ function Home() {
       </Grid>
 
       {/* Contact form */}
-      <Grid item container direction={"column"} alignItems={"center"} spacing={1} sx={{ my: '5rem', px:'8rem' }}>
+      <Grid item container direction={"column"} alignItems={"center"} spacing={1} sx={{ my: '5rem', px: '8rem' }}>
         <Grid item>
           <p style={{ fontSize: '16px', color: '#282938', fontWeight: '500' }}>Get In Touch</p>
         </Grid>
@@ -179,7 +180,7 @@ function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </Grid>
-        <Grid item container justifyContent={"space-between"} sx={{mt:'2.5rem'}}>
+        <Grid item container justifyContent={"space-between"} sx={{ mt: '2.5rem' }}>
           <Grid item xs={5}>
             <SimpleTextField title="First name" type="text" />
           </Grid>
@@ -187,7 +188,7 @@ function Home() {
             <SimpleTextField title="Last name" type="text" />
           </Grid>
         </Grid>
-        <Grid item container justifyContent={"space-between"} sx={{mt:'1.5rem'}}>
+        <Grid item container justifyContent={"space-between"} sx={{ mt: '1.5rem' }}>
           <Grid item xs={5}>
             <SimpleTextField title="Email" type="text" />
           </Grid>
@@ -195,18 +196,23 @@ function Home() {
             <SimpleTextField title="Phone number" type="tel" />
           </Grid>
         </Grid>
-        <Grid item sx={{width:'100%' ,mt:'1.5rem'}}>
-          <SelectField title="Choose a topic"/>
+        <Grid item sx={{ width: '100%', mt: '1.5rem' }}>
+          <SelectField title="Choose a topic" />
         </Grid>
-        <Grid item sx={{width:'100%' ,mt:'1.5rem'}}>
-          <MessageTextField title="Message" type="text"/>
+        <Grid item sx={{ width: '100%', mt: '1.5rem' }}>
+          <MessageTextField title="Message" type="text" />
         </Grid>
-        <Grid item sx={{width:'100%'}}>
-        <FormControlLabel required control={<Checkbox />} label="I accept the terms" />
+        <Grid item sx={{ width: '100%' }}>
+          <FormControlLabel required control={<Checkbox />} label="I accept the terms" />
         </Grid>
         <Grid item >
-          <Button variant="contained" style={{textTransform: 'none', background: '#5E3BEE', width:'6rem', height:'3rem'}}>Submit</Button>
+          <Button variant="contained" style={{ textTransform: 'none', background: '#5E3BEE', width: '6rem', height: '3rem' }}>Submit</Button>
         </Grid>
+      </Grid>
+
+      {/* Footer */}
+      <Grid item sx={{ px: "5rem", py: "3rem", bgcolor: '#F5FCFF' }}>
+        <Footer />
       </Grid>
     </Grid>
   );
