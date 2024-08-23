@@ -29,11 +29,17 @@ function Footer() {
                     <p>Portfolio</p>
                 </Grid>
             </Grid>
-            <Grid item container xs={3} justifyContent={"flex-end"}>
-                <Grid item>
+            <Grid item container xs={3} justifyContent={"flex-end"} spacing={1}>
+            <Grid item>
                     <FacebookIcon />
+                </Grid>
+                <Grid item>
                     <InstagramIcon />
+                </Grid>
+                <Grid item>
                     <TwitterIcon />
+                </Grid>
+                <Grid item>
                     <LinkedInIcon />
                 </Grid>
 
